@@ -28,3 +28,11 @@ img{
     height: 250px;
     object-fit: contain;
 }
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}

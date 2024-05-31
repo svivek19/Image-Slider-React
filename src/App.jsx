@@ -24,7 +24,14 @@ const App = () => {
   return (
     <div className="main">
       <button onClick={handlePrev}>{"<"}</button>
-      <img src={data[imageIndex]} alt="image" />
+      {data.map((url, i) => (
+        <img
+          key={i}
+          src={url}
+          alt="image"
+          className={imageIndex === i ? "show" : "hide"}
+        />
+      ))}
       <button onClick={handleNext}>{">"}</button>
     </div>
   );
