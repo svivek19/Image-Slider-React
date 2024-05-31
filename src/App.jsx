@@ -6,19 +6,15 @@ const App = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const handlePrev = () => {
-    if (imageIndex <= 0) {
-      setImageIndex(data.length - 1);
-    } else {
-      setImageIndex(imageIndex - 1);
-    }
+    imageIndex <= 0
+      ? setImageIndex(data.length - 1)
+      : setImageIndex(imageIndex - 1);
   };
 
   const handleNext = () => {
-    if (imageIndex >= data.length - 1) {
-      setImageIndex(0);
-    } else {
-      setImageIndex(imageIndex + 1);
-    }
+    imageIndex >= data.length - 1
+      ? setImageIndex(0)
+      : setImageIndex(imageIndex + 1);
   };
 
   return (
